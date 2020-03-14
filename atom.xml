@@ -1,58 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://baiyu96.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-03-09T13:35:25.494Z</updated>
+    <title>BaiYu Blog</title>
+    <updated>2020-03-14T13:07:48.924Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://baiyu96.github.io"/>
     <link rel="self" href="https://baiyu96.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>好记性不如烂笔头</subtitle>
     <logo>https://baiyu96.github.io/images/avatar.png</logo>
     <icon>https://baiyu96.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, BaiYu Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Test]]></title>
-        <id>https://baiyu96.github.io/post/test/</id>
-        <link href="https://baiyu96.github.io/post/test/">
+        <title type="html"><![CDATA[git 学习笔记]]></title>
+        <id>https://baiyu96.github.io/post/gitLearnNote/</id>
+        <link href="https://baiyu96.github.io/post/gitLearnNote/">
         </link>
-        <updated>2020-03-09T13:32:23.000Z</updated>
-        <summary type="html"><![CDATA[<p>666</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>666</p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://baiyu96.github.io/post-images/1583760832390.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://baiyu96.github.io/post/hello-gridea/</id>
-        <link href="https://baiyu96.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2019-01-25T12:43:36.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="git-入门">git 入门</h1>
+<p><em>by baiyu create 2019/01/25</em></p>
+<p><em>by baiyu update 2019/11/23</em></p>
+<h2 id="为何使用git">为何使用Git</h2>
+<ul>
+<li>
+<p>为了让代码能够更好的持续集成，我们采用Git的持续集成</p>
+</li>
+<li>
+<p>Git支持版本回退等功能</p>
+</li>
+</ul>
+<h1 id="git常用命令">Git常用命令</h1>
+<h2 id="git-init">git init</h2>
+<pre><code>这个直接使用是将当前目录初始化成本地仓库的
+
+初始化指定目录的则是 git init &lt; repo &gt;
+
+如果是创建一个裸仓则是 git init --bare
+
+将指定目录创建成裸仓 git init --bare &lt; repo &gt;
+
+    注：裸仓跟普通仓库的区别在于，裸仓一般就是用于远程中心仓库，可以被clone，普通仓库不具备被clone的条件。
+    
+    在声明了裸仓库之后，使用git add命令报错如下信息：
+    git 错误 fatal: This operation must be run in a work tree 
+因为裸仓库无法进行git操作，所以在创建裸仓库之后还要进行git init操作
+</code></pre>
+<h2 id="git-add-filename">git add &lt; filename &gt;</h2>
+<pre><code>使用之后把文件添加道暂存区
+</code></pre>
+<h2 id="git-commit-m-引号这里面填写的是你提交文件时的说明这个便于你了解版本修改内容">git commit -m &quot;引号这里面填写的是你提交文件时的说明，这个便于你了解版本修改内容&quot;</h2>
+<pre><code>这个命令是把文件从暂存区提交到仓库
+</code></pre>
+<h2 id="git-status">git status</h2>
+<pre><code>查看状态
+</code></pre>
+<h2 id="git-push-remote-name-branch-name">git push &lt; remote-name &gt; &lt; branch-name &gt;</h2>
+<pre><code>一般使用的是 git push origin master
+
+master是整个项目的主分支
+
+如果你没有推送到master分支的权限的话，那么你就将branch-name改成你有权限的分支
+
+如果你是刚在本地初始化了裸仓库之后，你要
+</code></pre>
+<h2 id="git-branch">git branch</h2>
+<pre><code>查看分支
+</code></pre>
+<h2 id="git-branch-branch-name">git branch &lt; branch-name &gt;</h2>
+<pre><code>创建一个分支
+
+例如，创建一个名字为test的分支
+
+git branch test
+</code></pre>
+<h2 id="git-branch-d-branch-name">git branch -d &lt; branch-name &gt;</h2>
+<pre><code>删除指定分支
+</code></pre>
+<h2 id="git-checkout-branch-name">git checkout &lt; branch-name &gt;</h2>
+<pre><code>选择分支
+
+在上面创建了个分支之后可以使用该命令来切换分支
+</code></pre>
+<h2 id="git-check-b-branch-name">git check -b &lt; branch-name &gt;</h2>
+<pre><code>这个命令相当于上面的两个命令，是创建某一分支顺便切换到当前分支
+</code></pre>
+<h2 id="git-merge-branch-name">git merge &lt; branch-name &gt;</h2>
+<pre><code>合并分支
+将指定的分支合并到当前分支
+</code></pre>
+<h2 id="git-diff-filename">git diff &lt; filename &gt;</h2>
+<pre><code>这个可以查看文件的具体改动
+</code></pre>
+<h2 id="git-log">git log</h2>
+<pre><code>查看git的提交历史，可以查看版本号，便于我们回退到某个历史
+</code></pre>
+<h2 id="git-relog">git relog</h2>
+<pre><code>查看历史命令，便于我们回退到将来的某一个版本
+</code></pre>
+<h2 id="git-reset-hard-commit_id">git reset --hard &lt; commit_id &gt;</h2>
+<pre><code>使用该命令可以让文件回归到特定版本
+</code></pre>
+<h2 id="git-remote-add-origin-gitserverpathrepogit">git remote add origin git@server:path/repo.git</h2>
+<pre><code>关联一个远程仓库
+</code></pre>
 ]]></content>
     </entry>
 </feed>

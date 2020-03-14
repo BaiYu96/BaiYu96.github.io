@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>git 学习笔记 | BaiYu Blog</title>
+<link rel="shortcut icon" href="https://baiyu96.github.io/favicon.ico?v=1584191266906">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baiyu96.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="git 学习笔记 | BaiYu Blog - Atom Feed" href="https://baiyu96.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="git 入门
+by baiyu create 2019/01/25
+by baiyu update 2019/11/23
+为何使用Git
+
+
+为了让代码能够更好的持续集成，我们采用Git的持续集成
+
+
+Git支持版本回退等功能
+
+
+Git常..." />
+    <meta name="keywords" content="学习笔记" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baiyu96.github.io">
+  <img class="avatar" src="https://baiyu96.github.io/images/avatar.png?v=1584191266906" alt="">
+  </a>
+  <h1 class="site-title">
+    BaiYu Blog
+  </h1>
+  <p class="site-description">
+    好记性不如烂笔头
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              git 学习笔记
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-01-25
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://baiyu96.github.io/tag/note/" class="post-tag">
+                  # 学习笔记
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="git-入门">git 入门</h1>
+<p><em>by baiyu create 2019/01/25</em></p>
+<p><em>by baiyu update 2019/11/23</em></p>
+<h2 id="为何使用git">为何使用Git</h2>
+<ul>
+<li>
+<p>为了让代码能够更好的持续集成，我们采用Git的持续集成</p>
+</li>
+<li>
+<p>Git支持版本回退等功能</p>
+</li>
+</ul>
+<h1 id="git常用命令">Git常用命令</h1>
+<h2 id="git-init">git init</h2>
+<pre><code>这个直接使用是将当前目录初始化成本地仓库的
+
+初始化指定目录的则是 git init &lt; repo &gt;
+
+如果是创建一个裸仓则是 git init --bare
+
+将指定目录创建成裸仓 git init --bare &lt; repo &gt;
+
+    注：裸仓跟普通仓库的区别在于，裸仓一般就是用于远程中心仓库，可以被clone，普通仓库不具备被clone的条件。
+    
+    在声明了裸仓库之后，使用git add命令报错如下信息：
+    git 错误 fatal: This operation must be run in a work tree 
+因为裸仓库无法进行git操作，所以在创建裸仓库之后还要进行git init操作
+</code></pre>
+<h2 id="git-add-filename">git add &lt; filename &gt;</h2>
+<pre><code>使用之后把文件添加道暂存区
+</code></pre>
+<h2 id="git-commit-m-引号这里面填写的是你提交文件时的说明这个便于你了解版本修改内容">git commit -m &quot;引号这里面填写的是你提交文件时的说明，这个便于你了解版本修改内容&quot;</h2>
+<pre><code>这个命令是把文件从暂存区提交到仓库
+</code></pre>
+<h2 id="git-status">git status</h2>
+<pre><code>查看状态
+</code></pre>
+<h2 id="git-push-remote-name-branch-name">git push &lt; remote-name &gt; &lt; branch-name &gt;</h2>
+<pre><code>一般使用的是 git push origin master
+
+master是整个项目的主分支
+
+如果你没有推送到master分支的权限的话，那么你就将branch-name改成你有权限的分支
+
+如果你是刚在本地初始化了裸仓库之后，你要
+</code></pre>
+<h2 id="git-branch">git branch</h2>
+<pre><code>查看分支
+</code></pre>
+<h2 id="git-branch-branch-name">git branch &lt; branch-name &gt;</h2>
+<pre><code>创建一个分支
+
+例如，创建一个名字为test的分支
+
+git branch test
+</code></pre>
+<h2 id="git-branch-d-branch-name">git branch -d &lt; branch-name &gt;</h2>
+<pre><code>删除指定分支
+</code></pre>
+<h2 id="git-checkout-branch-name">git checkout &lt; branch-name &gt;</h2>
+<pre><code>选择分支
+
+在上面创建了个分支之后可以使用该命令来切换分支
+</code></pre>
+<h2 id="git-check-b-branch-name">git check -b &lt; branch-name &gt;</h2>
+<pre><code>这个命令相当于上面的两个命令，是创建某一分支顺便切换到当前分支
+</code></pre>
+<h2 id="git-merge-branch-name">git merge &lt; branch-name &gt;</h2>
+<pre><code>合并分支
+将指定的分支合并到当前分支
+</code></pre>
+<h2 id="git-diff-filename">git diff &lt; filename &gt;</h2>
+<pre><code>这个可以查看文件的具体改动
+</code></pre>
+<h2 id="git-log">git log</h2>
+<pre><code>查看git的提交历史，可以查看版本号，便于我们回退到某个历史
+</code></pre>
+<h2 id="git-relog">git relog</h2>
+<pre><code>查看历史命令，便于我们回退到将来的某一个版本
+</code></pre>
+<h2 id="git-reset-hard-commit_id">git reset --hard &lt; commit_id &gt;</h2>
+<pre><code>使用该命令可以让文件回归到特定版本
+</code></pre>
+<h2 id="git-remote-add-origin-gitserverpathrepogit">git remote add origin git@server:path/repo.git</h2>
+<pre><code>关联一个远程仓库
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#git-%E5%85%A5%E9%97%A8">git 入门</a>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BD%95%E4%BD%BF%E7%94%A8git">为何使用Git</a></li>
+</ul>
+</li>
+<li><a href="#git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">Git常用命令</a>
+<ul>
+<li><a href="#git-init">git init</a></li>
+<li><a href="#git-add-filename">git add &lt; filename &gt;</a></li>
+<li><a href="#git-commit-m-%E5%BC%95%E5%8F%B7%E8%BF%99%E9%87%8C%E9%9D%A2%E5%A1%AB%E5%86%99%E7%9A%84%E6%98%AF%E4%BD%A0%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%E6%97%B6%E7%9A%84%E8%AF%B4%E6%98%8E%E8%BF%99%E4%B8%AA%E4%BE%BF%E4%BA%8E%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%89%88%E6%9C%AC%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9">git commit -m &quot;引号这里面填写的是你提交文件时的说明，这个便于你了解版本修改内容&quot;</a></li>
+<li><a href="#git-status">git status</a></li>
+<li><a href="#git-push-remote-name-branch-name">git push &lt; remote-name &gt; &lt; branch-name &gt;</a></li>
+<li><a href="#git-branch">git branch</a></li>
+<li><a href="#git-branch-branch-name">git branch &lt; branch-name &gt;</a></li>
+<li><a href="#git-branch-d-branch-name">git branch -d &lt; branch-name &gt;</a></li>
+<li><a href="#git-checkout-branch-name">git checkout &lt; branch-name &gt;</a></li>
+<li><a href="#git-check-b-branch-name">git check -b &lt; branch-name &gt;</a></li>
+<li><a href="#git-merge-branch-name">git merge &lt; branch-name &gt;</a></li>
+<li><a href="#git-diff-filename">git diff &lt; filename &gt;</a></li>
+<li><a href="#git-log">git log</a></li>
+<li><a href="#git-relog">git relog</a></li>
+<li><a href="#git-reset-hard-commit_id">git reset --hard &lt; commit_id &gt;</a></li>
+<li><a href="#git-remote-add-origin-gitserverpathrepogit">git remote add origin git@server:path/repo.git</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baiyu96.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
