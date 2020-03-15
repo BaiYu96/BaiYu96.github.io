@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://baiyu96.github.io</id>
     <title>BaiYu Blog</title>
-    <updated>2020-03-14T13:07:48.924Z</updated>
+    <updated>2020-03-15T01:07:18.804Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://baiyu96.github.io"/>
     <link rel="self" href="https://baiyu96.github.io/atom.xml"/>
@@ -16,7 +16,8 @@
         <link href="https://baiyu96.github.io/post/gitLearnNote/">
         </link>
         <updated>2019-01-25T12:43:36.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="git-入门">git 入门</h1>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://baiyu96.github.io/post-images/1584233537501.png" alt="" loading="lazy"></figure>
+<h1 id="git-入门">git 入门</h1>
 <p><em>by baiyu create 2019/01/25</em></p>
 <p><em>by baiyu update 2019/11/23</em></p>
 <h2 id="为何使用git">为何使用Git</h2>
